@@ -1,26 +1,22 @@
-# Timeline App (Second Update)
+# Timeline of Technology — Stage 2
 
-## Overview
-Welcome to the second update of Timeline App! This update brings new features and improvements to help you better organize and visualize important events in your life or projects.
+## Description
 
-## What's New in this Update
-- **Added Event Filtering:** Easily filter your timeline events by year or category for quicker access.
-- **Improved User Interface:** Enhanced the event layout for better readability and smoother navigation.
-- **Image Support:** Now you can add images to your timeline events to make them more vivid and informative.
-- **Performance Optimizations:** Faster loading times and smoother scrolling experience.
-- **Bug Fixes:** Fixed issues with date formatting and event duplication reported by users.
+This project is a timeline-based web application that visually represents major computer technological milestones.
 
-## How to Update
-- For mobile users: Update Timeline App via the App Store or Google Play Store to get the latest features.
-- For web users: Refresh your browser or clear cache if you don’t see the new features immediately.
+### Stage 2 Goals
 
-## Known Issues
-- Some users may experience a slight delay when uploading large images. We are working on improving this in the next update.
-- Filtering by custom tags is not available yet but planned for future releases.
+- Style the HTML skeleton created in Stage 1 into a responsive and polished layout.
 
-## Contact & Support
-We value your feedback! For any questions, suggestions, or issues, please reach out to us at support@timelineapp.com.
+- Implemented a `styles.css` (or SCSS) file including:
+  - Responsive layout for the timeline using **Flexbox** or **CSS Grid**.
+  - Header styling with improved typography and color scheme.
+  - Placeholder styles for event markers (such as dots and labels) to visually distinguish timeline points.
+  - Base styles for the modal component, which remains hidden by default until triggered.
 
----
+- Ensure the design adapts smoothly across different device widths:
+  - Mobile: viewport width less than 768px
+  - Tablet: viewport width between 768px and 1023px
+  - Desktop: viewport width 1024px and above
 
-Thank you for using Timeline App and helping us build a better experience for you!
+> No JavaScript functionality added yet; this update focuses purely on responsive styling and layout polish.
