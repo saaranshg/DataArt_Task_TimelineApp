@@ -1,0 +1,238 @@
+/* ====== Global Reset & Typography ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ====== Header ====== */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+header .branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header .branding img {
+  width: 40px;
+  height: 40px;
+}
+
+#theme-toggle {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+}
+
+/* ====== Year Strip Timeline ====== */
+.year-strip {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 1rem auto;
+  font-weight: bold;
+  color: #555;
+  position: relative;
+}
+
+.year-strip::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+
+.year-strip span {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.year-strip span::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.year-strip span.active::before {
+  background-color: #0066ff;
+  transform: scale(1.3);
+  box-shadow: 0 0 6px rgba(0, 102, 255, 0.6);
+}
+
+/* ====== Timeline Section ====== */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+#timeline {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Event Box Centering & Styling */
+
+
+.event-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between year and title */
+    margin-bottom: 10px;
+}
+
+.event-year {
+    color: #1E73BE; /* blue color like your screenshot */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.event-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #000;
+    text-align: center;
+    margin-left: 7rem;
+}
+
+.event {
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 2.5rem;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.event figure {
+  margin-bottom: 1.5rem;
+}
+
+.event img {
+    width: 60%;
+    max-width: 800px;
+    height: 400px;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 12px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.event button {
+  background-color: #0066ff;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.event button:hover {
+  background-color: #004ecc;
+}
+
+/* ====== Modal ====== */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modal.active {
+  display: flex;
+}
+
+#modal .modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* ====== Dark Mode ====== */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .event {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .year-strip {
+  color: #bbb;
+}
+
+body.dark-mode .year-strip span::before {
+  background-color: #555;
+}
+
+body.dark-mode .year-strip span.active::before {
+  background-color: #1e90ff;
+}
+
+/* ====== Responsive Breakpoints ====== */
+@media (max-width: 767px) {
+  .year-strip {
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .event {
+    max-width: 750px;
+  }
+}
